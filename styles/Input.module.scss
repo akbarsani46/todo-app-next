@@ -1,0 +1,6 @@
+@use "./utils/var" as *;
+@use "./utils/mixins" as *;
+
+.input__todo {
+    @include makeInput();
+}

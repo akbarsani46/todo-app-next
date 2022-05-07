@@ -1,0 +1,13 @@
+@use "./utils/var" as *;
+
+@font-face {
+    font-family: interTodo;
+    src: url("../public/inter-variablefont_slntwght-webfont.woff")
+            format("woff"),
+        url("../public/inter-variablefont_slntwght-webfont.woff2")
+            format("woff2");
+}
+
+.text__danger {
+    color: $danger-color;
+}

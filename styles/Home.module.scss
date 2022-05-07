@@ -1,0 +1,9 @@
+@use "./utils/var" as *;
+@use "./utils/mixins" as *;
+
+.todo__home {
+    @include flex(none, none, column);
+    .todo__items {
+        min-height: 90vh;
+    }
+}

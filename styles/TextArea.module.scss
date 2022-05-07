@@ -1,0 +1,9 @@
+@use "./utils/var" as *;
+@use "./utils/mixins" as *;
+
+.text__area__default {
+    resize: none;
+    @include makeInput();
+    min-height: 10rem;
+    padding: 0.5rem;
+}

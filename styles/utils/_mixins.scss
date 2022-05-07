@@ -1,0 +1,26 @@
+@use "./var" as *;
+
+@mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin makeInput() {
+    min-width: 100%;
+    min-height: 3rem;
+    padding: 0 0.5rem;
+
+    outline: none;
+    border: none;
+
+    background: aliceblue;
+
+    box-shadow: $shadow;
+    border-radius: 0.3rem;
+
+    // &:focus {
+    //     border: 1px solid $danger-color;
+    // }
+}

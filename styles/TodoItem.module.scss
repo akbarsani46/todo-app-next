@@ -1,0 +1,58 @@
+@use "./utils/var" as *;
+@use "./utils/mixins" as *;
+
+.todo__item {
+    background: aliceblue;
+    padding: 0.5rem;
+    color: $danger-color;
+    border-radius: 0.5rem;
+    box-shadow: $shadow;
+    margin-bottom: 1rem;
+
+    .todo__header {
+        margin-bottom: 1rem;
+
+        .todo__title {
+            color: $danger-color-lighter;
+        }
+    }
+
+    .todo__body {
+        margin-bottom: 1rem;
+
+        .todo__description {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .todo__footer {
+        @include flex(space-between, center);
+        .button__todoItem {
+            width: 2rem;
+            height: 2rem;
+            border: none;
+            outline: none;
+            background: $danger-color;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            @include flex(center, center);
+
+            .todo__buttonIcon {
+                width: 1rem;
+                path {
+                    fill: aliceblue;
+                }
+            }
+        }
+    }
+}
+
+.todo__item__done {
+    > .todo__header,
+    .todo__body,
+    button:nth-child(1) {
+        opacity: 0.5;
+        pointer-events: none;
+        text-decoration: line-through;
+    }
+}
